@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tets in <FirstAppWatch /> debe hacer math con el snapshot 1`] = `
+<div>
+  <h1
+    data-testid="test-title"
+  >
+    Hello, I am Goku
+  </h1>
+  <p>
+    There is not subtitle
+  </p>
+  <p>
+    My name is Jordan
+  </p>
+</div>
+`;

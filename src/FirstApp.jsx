@@ -1,23 +1,3 @@
-//fragment <> </>
-// const newMesssage = {
-//     message: 'Hola Mundo',
-//     title: 'Jordan'
-// };
-
-// const getSaludo = (a,b) => {
-//     return a + b
-// };
-
-// export const FirstAppWatch = () => {
-//     return (
-//       <>
-//         {/* <p>{ getSaludo(4,20) }</p> */}
-//         {/* <code>{ JSON.stringify(newMesssage) }</code> */}
-//         <h1>Jordan</h1>
-//         <p>Subtitulo</p>
-//       </>
-//     )  
-// }
 import PropTypes from 'prop-types'
 
 export const FirstAppWatch = ( { title, subTitle, name} ) => {
@@ -26,7 +6,7 @@ export const FirstAppWatch = ( { title, subTitle, name} ) => {
   }
   return (
     <>
-      <h1>{ title }</h1>
+      <h1 data-testid="test-title">{ title }</h1>
       <p>{ subTitle }</p>
       <p>{ name }</p>
     </>
