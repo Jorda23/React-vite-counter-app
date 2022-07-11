@@ -1,41 +1,33 @@
 import { useState } from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
-
-
-export const CounterApp = ( { value } ) => {
-
-    // console.log('render');
-    //API...... FETCH.........
-
+export const CounterApp = ({ value }) => {
+    
     const [ counter, setCounter ] = useState( value );
 
-    const handleAdd = () => {
-        setCounter( counter + 1); //el setCounter cambia el valor de counter que es el valor de value
-        // setCounter( (c) => c + 1);
+    const handleAdd = () => { 
+        // console.log(event)
+        setCounter( counter + 1 );
+        // setCounter( (c) => c + 1 )
     }
 
-    const handleSubtract = () => {
-        setCounter( counter - 1); 
-    }
-
-    const initialReset = () => {
-        setCounter( value ); 
-    }
+    const handleSubstract = () => setCounter( counter - 1 );
+    const handleReset = () => setCounter( value );
 
     return (
-    <>
-      <h1>CounterApp</h1>
-      <h2> { counter } </h2>
+        <>
+            <h1>CounterApp</h1>
+            <h2> { counter } </h2>
 
-      <button onClick={ handleAdd }> +1 </button>
-      <button onClick={ handleSubtract }>-1</button>
-      <button onClick={  initialReset }>Reset</button>
-    </>
-  );
+            <button onClick={ handleAdd }> +1 </button>
+            <button onClick={ handleSubstract }> -1 </button>
+            <button aria-label="btn-reset" onClick={ handleReset }> Reset </button>
+        </>
+    );
 }
 
 CounterApp.propTypes = {
-    value: PropTypes.number,
+    value: PropTypes.number.isRequired
 }
+
 

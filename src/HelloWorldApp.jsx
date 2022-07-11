@@ -1,12 +1,15 @@
 // function App() {
-//     return (<h1>Hola mundo XDXDXD</h1>);
-// };
+//     return (<h1>Hola Mundo</h1>);
+// }
 
 // export default App;
 
 export const HelloWorldApp = () => {
-    return (
-        <div>Hola mundo XDXDXD</div>
-    );
+
+
+  return (
+    <h1>Hello World App</h1>
+  );
 }
 
+// FirstApp  <h1>Fernando</h1>

@@ -1,45 +1,28 @@
-//fragment <> </>
-// const newMesssage = {
-//     message: 'Hola Mundo',
-//     title: 'Jordan'
-// };
+import PropTypes from 'prop-types';
 
-// const getSaludo = (a,b) => {
-//     return a + b
-// };
+export const FirstApp = ({ title, subTitle, name }) => {
 
-// export const FirstAppWatch = () => {
-//     return (
-//       <>
-//         {/* <p>{ getSaludo(4,20) }</p> */}
-//         {/* <code>{ JSON.stringify(newMesssage) }</code> */}
-//         <h1>Jordan</h1>
-//         <p>Subtitulo</p>
-//       </>
-//     )  
-// }
-import PropTypes from 'prop-types'
-
-export const FirstAppWatch = ( { title, subTitle, name} ) => {
-  if(!title){
-   throw new Error ('The title not exist')
-  }
+  // console.log(props);
+  
   return (
     <>
-      <h1>{ title }</h1>
+      <h1 data-testid="test-title"> { title } </h1>
+      {/* <code>{ JSON.stringify( newMessage ) }</code> */}
+      <p>{ subTitle }</p>
       <p>{ subTitle }</p>
       <p>{ name }</p>
     </>
-  )  
+  )
 }
 
-FirstAppWatch.propTypes = {
+
+FirstApp.propTypes = {
   title: PropTypes.string.isRequired,
-  subTitle: PropTypes.string.isRequired,
+  subTitle: PropTypes.string,
 }
 
-FirstAppWatch.defaultProps = {
-  name: "My name is Jordan",
-  subTitle: "There is not subtitle",
-  title: "There is not title, thanks for attention"
+FirstApp.defaultProps = {
+  name: 'Fernando Herrera',
+  subTitle: 'No hay subtítulo',
+  // title: 'No hay título',
 }
